@@ -2,7 +2,7 @@ package tacos;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-
+// sad promjena
 @Data
 @RequiredArgsConstructor
 public class Ingredient
