@@ -18,7 +18,7 @@ public class PersonService
       super();
       this.personDao = personDao;
    }
-
+   // doadt komentar
    public int addPerson(Person person)
    {
       return personDao.insertPerson(person);
