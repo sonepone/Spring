@@ -21,4 +21,12 @@ implements PersonDao
       return 1;
    }
 
+   @Override
+   public List<Person> selectAllPeople()
+   {
+      // TODO Auto-generated method stub
+      return DB;
+   }
+   
+
 }

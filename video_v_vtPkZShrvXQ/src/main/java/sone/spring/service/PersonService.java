@@ -1,8 +1,11 @@
 package sone.spring.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import sone.spring.dao.PersonDao;
 import sone.spring.model.Person;
@@ -22,5 +25,10 @@ public class PersonService
    public int addPerson(Person person)
    {
       return personDao.insertPerson(person);
+   }
+   
+   public List<Person> getAllPeople()
+   {
+      return personDao.selectAllPeople();
    }
 }
