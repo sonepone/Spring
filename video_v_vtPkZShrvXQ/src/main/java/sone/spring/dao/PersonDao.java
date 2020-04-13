@@ -6,7 +6,7 @@ import java.util.UUID;
 
 import sone.spring.model.Person;
 
-public interface PersonDao
+public interface PersonDao   
 {
    int insertPerson(UUID id, Person person);
    
@@ -16,11 +16,13 @@ public interface PersonDao
       return insertPerson(id, person);
    }
    
-   List<Person> selectAllPeople();
+   List<Person> selectAllPeople(); 
    
    int deletePersonById(UUID id);
    
    int updatePersonById(UUID id);
+   
+   int sonePone();
    
    Optional<Person> selectPersonById(UUID id);
    

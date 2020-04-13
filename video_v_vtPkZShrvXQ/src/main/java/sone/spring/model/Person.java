@@ -16,6 +16,7 @@ public class Person
    }
    public UUID getId()
    {
+      // mala premala promjena ovdje radi glupe gresketine
       return id;
    }
    public String getName()
