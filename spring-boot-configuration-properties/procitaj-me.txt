@@ -1,0 +1,6 @@
+Odlican materijal koji objasnjava tematiku:
+Spring Boot @ConfigurationProperties: Binding external configurations to POJO classes
+
+https://www.callicoder.com/spring-boot-configuration-properties-example/
+
+Takodje je objasnjeno i materija: profile
