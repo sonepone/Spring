@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import lombok.extern.slf4j.Slf4j;
@@ -42,6 +43,13 @@ public class DesignTacoController
       log.info("My info");
       log.error("My error");
       return "design";
+   }
+   @PostMapping
+   public String postIrajse(Taco design)
+   {
+      System.out.println("Evo me: ");
+      System.out.println("design = " + design.getName());
+      return "sone";
    }
    
    public List<Ingredient> filterByType(Ingredient.Type type, List<Ingredient> list)
