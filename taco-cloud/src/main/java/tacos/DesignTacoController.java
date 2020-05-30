@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import lombok.extern.slf4j.Slf4j;
 import tacos.Ingredient.Type;
+import com.sun.jna.platform.win32.Advapi32Util;
 
 @Controller
 @Slf4j
@@ -21,6 +22,15 @@ public class DesignTacoController
    @GetMapping
    public String showDesignForm(Model model)
    {
+      System.out.println("Ovdje sam");
+      System.out.println("--------------------------------------------------");
+      System.out.println("Vracal ovaj ista >"+Advapi32Util.getCurrentUserGroups()+"<");
+      System.out.println("--------------------------------------------------");
+
+      for (Advapi32Util.Account account : Advapi32Util.getCurrentUserGroups()) {
+         System.out.println(account.fqn);
+     }
+         
       List<Ingredient> listaSastojaka = Arrays.asList(
             new Ingredient("FLTO", "Fluor Tortilla", Type.WRAP),
             new Ingredient("COTO", "Corn Tortilla", Type.WRAP),
